@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "vpool_backend": {
+      "main": "src/vpool_backend/main.mo",
+      "type": "motoko"
+    },
+    "vpool_frontend": {
+      "dependencies": [
+        "vpool_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/vpool_frontend/src/index.html"
+      },
+      "source": [
+        "src/vpool_frontend/assets",
+        "dist/vpool_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
